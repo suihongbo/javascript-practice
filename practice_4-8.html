@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习题</title>
+</head>
+<body>
+<script>
+    var i,b,c,d,j,num=0;
+    document.write('满足是13的倍数，且第3位数加上第2位数等于第4位数的有：'+'<BR>');
+    for(i=1000;i<10000;i++){
+        b=Math.floor(Math.floor(i%1000/100));
+        c=Math.floor(Math.floor(i%100/10));
+        d=Math.floor(i%10);
+        if(i%13==0&&d==b+c){
+            document.write(i);
+            for(j=1;j<=4;j++){
+                document.write('&nbsp');
+            }
+            num+=1;
+            if(num==5){
+                document.write('<BR>');
+                num=0;
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

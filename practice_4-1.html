@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习题</title>
+</head>
+<body>
+<script>
+    var q=prompt('请输入年龄','18'),q1;
+    q1=q*1;
+    if(q1==0){
+        q1=parseInt(q);
+    }
+    if(isNaN(q1)){
+        document.write('你输入的不是一个数字！');
+    }else if (q<14){
+        document.write('你是儿童');
+    }else if(q<24&&q>=14){
+        document.write('你是青少年');
+    }else if(q<40&q>=24){
+        document.write('你是青年');
+    }else if(q<40&&q>=60){
+        document.write('你是中年');
+    }else if(q>=60){
+        document.write('你是老年');
+    }
+</script>
+</body>
+</html>
