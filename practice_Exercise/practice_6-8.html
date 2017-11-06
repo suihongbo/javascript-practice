@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //设计一个函数DayOfYear(d)，它接必一个日期参数d，返回一个该日期是所在年份的
+    // 第几天，如DayOfYear(2000,2,8)的返回值是39.
+    //（提示：①定义一个数组months=new Array（31,28,31,30,31,30,31,31,30,
+    // 31，30,31）记录每个月少天：②定义一个
+    //辅助函数IsLeapYear(y)判定某个年份是否闰年，以确定2月份的天数是28还是29。）
+
+    var months=new Array(31,28,31,30,31,30,31,31,30, 31,30,31);
+    var dateyear=prompt('请输入年','2017'),
+    datemonth=prompt('请输入月','11'),
+    dateday=prompt('请输入年日','4');
+    function IsLeapYear(y){
+        if(y%4==0 && y%100!=0 || y%400==0);
+    }
+
+    function DayOfYear(year,month,day) {
+        var num=0;
+        if(IsLeapYear(year)){
+            months[1]=29;
+        }
+        for(var i=0;i<month-1;i++){
+            num+=months[i];
+        }
+        num+=parseInt(day);
+        return num;
+    }
+
+    alert(DayOfYear(dateyear,datemonth,dateday));
+//    document.write(DayOfYear(2000,4,8));
+
+</script>
+</body>
+</html>
