@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbbeb3f5-659f-41e2-98a7-fd32e8678dea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/practice_Exercise/practice_6-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/practice_Exercise/practice_6-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/practice_Exercise/practice_6-3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/practice_4-6.html" afterPath="$PROJECT_DIR$/practice_Exercise/practice_4-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/practice_5-5.html" afterPath="$PROJECT_DIR$/practice_Exercise/practice_5-5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/practice_5-6.html" afterPath="$PROJECT_DIR$/practice_Exercise/practice_5-6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/practice_5-7.html" afterPath="$PROJECT_DIR$/practice_Exercise/practice_5-7.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/practice_5-9.html" afterPath="$PROJECT_DIR$/practice_Exercise/practice_5-9.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/practice_Exercise/test_all.html" afterPath="$PROJECT_DIR$/practice_Exercise/test_all.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -267,7 +258,7 @@
       <workItem from="1509757586589" duration="16372000" />
       <workItem from="1509875569118" duration="2558000" />
       <workItem from="1509952289939" duration="2358000" />
-      <workItem from="1510047118036" duration="8515000" />
+      <workItem from="1510047118036" duration="8526000" />
     </task>
     <task id="LOCAL-00001" summary="practice_2">
       <created>1509525252861</created>
@@ -297,11 +288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509952706917</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="practice_2">
+      <created>1510056450316</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1510056450316</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51472000" />
+    <option name="totallyTimeSpent" value="51483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
