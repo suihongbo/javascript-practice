@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    //编写一个带一个参数（指定显示多少层星号“*”的函数，它在页面
+    // 止输出的一个5层星号“*”图案类似。
+
+    function a(num) {
+        for(var i=1;i<=num;i++){
+            for(var j=1;j<=num-i;j++){
+                document.write("&nbsp");
+            }
+            for(var k=1;k<=i;k++){
+                document.write("*"+"&nbsp");
+            }
+            document.write('<br>');
+        }
+    }
+    a(10);
+
+
+</script>
 
 </body>
 </html>

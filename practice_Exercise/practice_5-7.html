@@ -9,27 +9,27 @@
     //斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
     // 试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
     //递归
- /*   function fib(n) {
+    function fib(n) {
         if(n<=2){
             return 1;
         }else {
             return arguments.callee(n-1)+arguments.callee(n-2);
         }
     }
-    document.write(fib(6));*/
+    document.write(fib(7));
 
     //非递归
-    function fib(n) {
-        if(n<=2){
-            return 1;
-        }
-        var arr=[1,1];
-        for(i=2;i<n;i++){
-            arr[i]=arr[i-1]+arr[i-2];
-        }
-        return arr[n-1];
-    }
-    document.write(fib(7));
+//    function fib(n) {
+//        if(n<=2){
+//            return 1;
+//        }
+//        var arr=[1,1];
+//        for(i=2;i<n;i++){
+//            arr[i]=arr[i-1]+arr[i-2];
+//        }
+//        return arr[n-1];
+//    }
+//    document.write(fib(7));
 </script>
 </body>
 </html>

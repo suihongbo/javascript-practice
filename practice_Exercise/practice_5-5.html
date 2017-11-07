@@ -8,6 +8,28 @@
 <script>
     //编写一个非递归函数factorial(n)，计算12!-10!的结果。
 
+//    function factorial(n) {
+//        var sum=1;
+//        for(var i=1;i<=n;i++){
+//            sum*=i;
+//        }
+//        return sum;
+//    }
+//    document.write(factorial(12)-factorial(10));
+
+
+    function factorial(n) {
+        var num=0;
+        if(n==1){
+            return 1;
+        }
+        num=n*factorial(n-1);
+        return num;
+    }
+
+    document.write(factorial(12)-factorial(10));
+
+
 </script>
 </body>
 </html>

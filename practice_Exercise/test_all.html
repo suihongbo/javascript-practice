@@ -30,25 +30,105 @@
 //    }
 
 //    在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
-    function a(num) {
-        for(var i=2;i<=Math.sqrt(num);i++){
-            if(num%i==0){
-                return false;
-            }
-        }
-        return true;
-    }
+//    function a(num) {
+//        for(var i=2;i<=Math.sqrt(num);i++){
+//            if(num%i==0){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
+//    var count=0;
+//    for(var i=100;i<=1000;i++){
+//        if(a(i)){
+//            document.write(i+' ');
+//            count++;
+//            if(count%6==0){
+//                document.write('<BR/>');
+//            }
+//        }
+//    }
 
-    var count=0;
-    for(var i=100;i<=1000;i++){
-        if(a(i)){
-            document.write(i+' ');
-            count++;
-            if(count%6==0){
-                document.write('<BR/>');
-            }
-        }
-    }
+    //斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。
+    // 试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值。
+
+    //递归
+//    var b=prompt('请输入斐波那契数列第几项');
+//    var arr=[1,1]
+//    function Fibonacci(n) {
+//        if(n<=2){
+//            return 1;
+//        }else {
+//            return arguments.callee(n-1)+arguments.callee(n-2);
+//        }
+//    }
+//
+//    alert(Fibonacci(b));
+
+
+    //非递归
+//    var sum=prompt('请输入斐波那契数列第几项');
+//    var arr=[1,1];
+//    function a(n) {
+//        if(n<=2){
+//            return 1;
+//        }
+//        for(var i=2;i<n;i++){
+//            arr[i]=arr[i-1]+arr[i-2];
+//        }
+//        return arr[n-1];
+//    }
+//    document.write(a(sum));
+
+
+    //编写函数，用下面的公式计算π的近似值。
+
+//    function pi(n) {
+//        var sum=0;
+//        for(var i=1;i<=n;i++){
+//            sum+=(Math.pow(-1,i-1))/(2*i-1);
+//        }
+//        return sum*4;
+//    }
+//    document.write(pi(10000));
+
+//    function pi(n) {
+//        var sum=0,sign=1;
+//        for(var i=1;i<=n;i++){
+//            sum+=sign/(2*i-1);
+//            sign*=-1;
+//        }
+//        return sum*4;
+//    }
+//    document.write('PI(10000)='+pi(10000));
+
+    //利用全局变量和函数，设计模拟幸运数字机游戏。设卒运数字为8，每次由
+    // 计算机随机产生3个1-9之间(包括1和9）的随机数，当这3个随机数中有
+    // 一个数字为8时，就算赢了一次，要求利用函数计算获胜率。
+
+//    var x,y,z,win,isContinue=true,num=0,sum=0;
+//    function game() {
+//        x=Math.floor(Math.random()*9)+1;
+//        y=Math.floor(Math.random()*9)+1;
+//        z=Math.floor(Math.random()*9)+1;
+//        if(x==8 || y==8 || z==8){
+//            win='你赢了';
+//            num++;
+//        }else {
+//            win='你输了';
+//        }
+//        sum++;
+//        return win;
+//    }
+//    while (isContinue){
+//        isContinue=confirm(game()+'\n'+x+' '+y+' '+z+'\n'+'胜率：'+(num/sum*100).toFixed(2)+'%');
+//    }
+
+
+
+
+
 
 
 
