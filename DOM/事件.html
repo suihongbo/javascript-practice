@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background: #0f0;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">1234567890987654321</div>
+<script>
+    var oDiv = document.getElementById('box');
+
+    function addEvent(elem,type,fn,flag) {
+        if(elem.addEventListener){
+            elem.addEventListener(type,fn,flag);
+        }else{
+            elem.attachEvent('on'+type,function () {
+                fn.call(elem);
+            });
+        }
+    }
+
+    addEvent(oDiv,'click',function () {
+        alert(this.innerHTML);
+    },false);
+
+</script>
+
+</body>
+</html>
