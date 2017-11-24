@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 50px auto;
+        }
+        #box img{
+            width: 800px;
+            height: 500px;
+            position: absolute;
+        }
+        #box span{
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background: #e0e0e0;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 58px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #box span:hover{
+            background: #ff6700;
+        }
+        #box #prev-btn{
+            left: 0;
+            bottom:220px;
+        }
+        #box #next-btn{
+            right: 0;
+            bottom:220px;
+        }
+        #img-box img{
+            display: none;
+        }
+        #img-box .active{
+            display: block;
+        }
+        #btn{
+            width: 100px;
+            height: 20px;
+            position: absolute;
+            right: 30px;
+            bottom:20px;
+        }
+        #btn li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            color: #fff;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        #btn .selected{
+            background: #ff6700;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <div id="img-box">
+        <img class="active" src="img/lbt4cd4dd2c504ad4fb6d446510d75e7b25e.jpg" alt="">
+        <img src="img/lbt23590bc595ea14fdc2778a14b879773b9.jpg" alt="">
+        <img src="img/lbt3c7eac39e1e5cd459ce899bf85978b994.jpg" alt="">
+        <img src="img/lbt16804f8ce5dbda5cd827748c544979abc.jpg" alt="">
+    </div>
+    <ul id="btn">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+        <span id="prev-btn">&lt;</span>
+        <span id="next-btn">&gt;</span>
+</div>
+<script>
+    var oBox=document.getElementById('box');
+    var aImg=oBox.getElementsByTagName('img');
+    var oUl=document.getElementById('btn')
+    var aLi=oUl.getElementsByTagName('li');
+    var oPrevBtn=document.getElementById('prev-btn');
+    var oNextBtn=document.getElementById('next-btn');
+    var iNow=0;
+
+    for(var i=0; i<aLi.length ;i++){
+        aLi[i].index = i ;
+        aLi[i].onmouseover = function () {
+            changeImg(this.index);
+            iNow=this.index;
+        }
+    }
+    oNextBtn.onclick = function () {
+        iNow++;
+        if(iNow >= aLi.length){
+            iNow = 0;
+        }
+        changeImg(iNow);
+    }
+    oPrevBtn.onclick = function () {
+        iNow--;
+        if(iNow < 0){
+            iNow = 3;
+        }
+        changeImg(iNow);
+    }
+    function changeImg(idx) {
+        for(var j=0 ;j<aLi.length ;j++){
+            aLi[j].className = '';
+            aImg[j].className = '';
+        }
+        aLi[idx].className='selected';
+        aImg[idx].className='active';
+    }
+    var timer;
+    run();
+    oBox.onmouseover = function () {
+        clearInterval(timer);
+    }
+    oBox.onmouseout = function () {
+        run();
+    }
+    function run() {
+        timer=setInterval(function () {
+            oNextBtn.onclick();
+        },1000)
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>右键菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #ul1{
+            width: 120px;
+            height: 150px;
+            padding:20px;
+            border:1px solid #eeeeee;
+            border-radius:5px;
+            display: none;
+            position: absolute;
+        }
+        #ul1 li{
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            cursor: pointer;
+        }
+        #ul1 li:hover {
+            background: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li>设为代办</li>
+    <li>设为已读</li>
+    <li>置顶邮件</li>
+    <li>添加备注</li>
+    <li>删除</li>
+    <li>黑凤梨</li>
+</ul>
+<script>
+    /*
+    事件三要素
+    事件源（document） 事件处理函数（function）事件（e）
+     */
+    var oUl1=document.getElementById('ul1');
+    var aLi1=oUl1.getElementsByTagName('li');
+    document.oncontextmenu = function (e) {
+        e = e || window.event;
+        oUl1.style.display = 'block' ;
+        oUl1.style.left = e.clientX+'px';
+        oUl1.style.top = e.clientY+'px';
+        return false;
+    }
+    document.onclick = function () {
+        oUl1.style.display = 'none';
+    }
+    for(var i=0 ;i<aLi1.length ;i++){
+        aLi1[i].onclick=function () {
+            alert(this.innerHTML);
+        }
+    }
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
